@@ -1,0 +1,45 @@
+@import "tailwindcss";
+
+
+.section-title-border {
+    position: relative;
+    padding: 0 10px; 
+    z-index: 10; 
+    
+}
+
+.section-title-border::before {
+    content: '';
+    position: absolute;
+    top: -10px; 
+    left: -10px;
+    width: 40px; 
+    height: 40px;
+    border-top: 5px solid transparent;
+    border-left: 5px solid transparent;
+    border-top-left-radius: 10px; 
+    border-image: linear-gradient(
+        316.11deg, 
+        #FBD300 0.4%, 
+        #FFFFFF 110.43% 
+    ) 1; 
+    opacity: 40%;
+}
+
+.section-title-border::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    width: 40px;
+    height: 40px;
+    border-bottom: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-bottom-right-radius: 0px; 
+    border-image: linear-gradient(
+        316.11deg, 
+        #FBD300 0.4%, 
+        #FFFFFF 110.43%
+    ) 1;
+    opacity: 40%;
+}
